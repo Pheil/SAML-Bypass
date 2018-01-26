@@ -1,0 +1,45 @@
+{
+
+  "manifest_version": 2,
+  "name": "SAML Bypass",
+  "short_name": "SAML Bypass",
+  "version": "0.0.1",
+  "homepage_url": "http://170.64.172.49/cae/#Tools",
+  "description": "Adds 'X-OfApp: WINWORD' to all headers to bypass SAML authentication.  https://support.symantec.com/en_US/article.TECH243219.html",
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png"
+  },
+  
+  "background": {
+    "scripts": ["js/headers.js"],
+    "persistent": true
+  },
+  
+  "applications": {
+    "gecko": {
+      "id": "SAMLBypass@tenneco.com",
+      "strict_min_version": "50.0",
+      "update_url": "https://s3.us-east-2.amazonaws.com/tennecomilan/SAMLBypassUpdates.json"
+    }
+  },
+    
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ], 
+    
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "64": "images/icon-64.png"
+    },
+    "default_title": "SAML Bypass"
+  }
+
+}
